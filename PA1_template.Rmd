@@ -1,9 +1,9 @@
 ---
-title: "PA1_template"
+title: "Assignment 1"
 author: "Glenn Berkwitt"
 date: "December 20, 2015"
 output: html_document
-==========================================
+---
 
 Load required libraries
 ```{r, echo=TRUE}
@@ -21,12 +21,10 @@ Read in the data
 data <- read.csv("activity.csv", header = TRUE, sep = ',', colClasses = c("numeric", "character",
                                                            "integer"))
 ```
-
 Format date data
 ```{r, echo=TRUE}
 data$date <- as.Date(data$date)
 ```
-
 Take a look at the formatted data
 ```{r, echo=TRUE}
 str(data)
@@ -179,4 +177,7 @@ wkdvswkendplot<-ggplot(aggdaytype,aes(x=interval, y=steps))+geom_line(color="blu
 wkdvswkendplot<-wkdvswkendplot+xlab("5-Minute Intervals")+ylab("Avg Number of Steps")+ggtitle("Weekdays vs. Weekends")
 wkdvswkendplot
 ```
+
+
+
 Panel shows that number of steps on weekends is much lower than on weekdays.
