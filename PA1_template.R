@@ -121,3 +121,5 @@ wkdvswkendplot<-ggplot(aggdaytype,aes(x=interval, y=steps))+geom_line(color="blu
 wkdvswkendplot<-wkdvswkendplot+xlab("5-Minute Intervals")+ylab("Avg Number of Steps")+ggtitle("Weekdays vs. Weekends")
 wkdvswkendplot
 #Panel shows that number of steps on weekends is much lower than on weekdays.
+
+knit2html("PA1_template.rmd")
